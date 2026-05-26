@@ -2,6 +2,7 @@
 using Gem.Powerplant.Application.Interfaces;
 using Gem.Powerplant.Domain.Models;
 using Gem.Powerplant.Application.DTOs;
+using Gem.Powerplant.Application.Processors;
 
 
 namespace Gem.Powerplant.Application.Services;
@@ -10,13 +11,16 @@ public class DispatchService : IDispatchService
 {
     private readonly ILogger _logger;
     private readonly IProductionService _productionService;
+    private readonly CostMarginalProcesor _costMarginalProcesor;
 
     public DispatchService(
         ILogger<DispatchService> logger,
-        IProductionService productionService)
+        IProductionService productionService,
+        CostMarginalProcesor costMarginalProcesor)
     {
         _logger = logger;
         _productionService = productionService;
+        _costMarginalProcesor = costMarginalProcesor;
     }
 
     public IEnumerable<PowerplantProduction> DispatchProduction(ProductionPlanRequest productionPlanRequest)
@@ -27,7 +31,10 @@ public class DispatchService : IDispatchService
             productionPlanRequest.Load, productionPlanRequest.Powerplants.Count);
             var meritOrderedPowerplants = productionPlanRequest
                 .Powerplants
-                .OrderBy(x => x.ComputeMarginalCost(productionPlanRequest.Fuels));
+                .OrderBy(x => _costMarginalProcesor.ComputeMarginalCost(
+                    x.Type,
+                    x.Efficiency,
+                    productionPlanRequest.Fuels));
             return _productionService.DispatchProduction(productionPlanRequest.Load,
                 meritOrderedPowerplants,
                 productionPlanRequest.Fuels);

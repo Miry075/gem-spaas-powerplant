@@ -1,5 +1,7 @@
 using Gem.Powerplant.Application.Interfaces;
+using Gem.Powerplant.Application.Processors;
 using Gem.Powerplant.Application.Services;
+using Gem.Powerplant.Application.Services.MarginalCosts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+
+
+builder.Services.AddScoped<IMarginalCost, TurboJetCost>();
+builder.Services.AddScoped<IMarginalCost, WindTurbineCost>();
+builder.Services.AddScoped<IMarginalCost, GasFiredCost>();
+builder.Services.AddTransient<CostMarginalProcesor>();
 
 builder.Services.AddScoped<IDispatchService, DispatchService>();
 builder.Services.AddScoped<IProductionService, ProductionService>();
