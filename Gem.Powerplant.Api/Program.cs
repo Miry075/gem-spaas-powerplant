@@ -8,24 +8,25 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApi("v1", options => { });
 
 builder.Services.AddScoped<IDispatchService, DispatchService>();
 builder.Services.AddScoped<IProductionService, ProductionService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    // Generates /openapi/v1.json
+    app.MapOpenApi("v1");
+    // Swagger UI must point to the OpenAPI endpoint
+    app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/openapi/v1.json", "API v1");
     });
 }
 
-app.UseHttpsRedirection();
-app.UseAuthorization();
 app.MapControllers();
 app.Run();
 
