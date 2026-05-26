@@ -23,6 +23,7 @@ This solution follows a layered architecture pattern:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone <repository-url>
    cd gem-spaas-powerplant
@@ -45,7 +46,7 @@ Start the API:
 dotnet run --project Gem.Powerplant.Api
 ```
 
-The API will be available at `https://localhost:5001` (or configured port in `appsettings.json`).
+The API will be available at `https://localhost:5133` (or configured port in `appsettings.json`).
 
 #### Docker
 
@@ -287,4 +288,7 @@ For issues or questions, please contact the development team or open an issue in
 ```
 
 ```
-````
+
+```
+
+```
