@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PYYAOmTGJ0g=",
+  "success": true,
+  "projectFilePath": "/Users/mharivao/Desktop/engie/coding challenge/gem-spaas-powerplant/Gem.Powerplant.Api/Gem.Powerplant.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/mharivao/.nuget/packages/microsoft.aspnetcore.openapi/10.0.3/microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "/Users/mharivao/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

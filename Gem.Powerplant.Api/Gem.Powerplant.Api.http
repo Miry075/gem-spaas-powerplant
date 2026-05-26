@@ -1,0 +1,6 @@
+@Gem.Powerplant.Api_HostAddress = http://localhost:5133
+
+GET {{Gem.Powerplant.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

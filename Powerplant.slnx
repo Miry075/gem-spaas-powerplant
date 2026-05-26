@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Gem.Powerplant.Api/Gem.Powerplant.Api.csproj" />
+  <Project Path="Gem.Powerplant.Application/Gem.Powerplant.Application.csproj" />
+  <Project Path="Gem.Powerplant.Domain/Gem.Powerplant.Domain.csproj" />
+  <Project Path="Gem.Powerplant.Tests/Gem.Powerplant.Tests.csproj" />
+</Solution>
