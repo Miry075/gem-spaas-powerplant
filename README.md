@@ -28,8 +28,6 @@ This solution follows a layered architecture pattern:
    cd gem-spaas-powerplant
    ```
 
-````
-
 2. Navigate to the project root
 
 3. Restore dependencies:
