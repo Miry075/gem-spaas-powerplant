@@ -25,3 +25,29 @@ This solution follows a layered architecture pattern:
 3. Restore dependencies:
    ```bash
    dotnet restore
+
+### Running the Application
+### Start the API:
+```bash
+dotnet run --project Gem.Powerplant.Api
+The API will be available at
+   ```bash
+   https://localhost:5001 
+(or configured port in appsettings.json).
+
+Running Tests
+Execute unit tests:
+   ```bash
+   dotnet test Gem.Powerplant.Tests
+Configuration
+Application settings are managed in:
+
+appsettings.json - Production settings
+appsettings.Development.json - Development settings
+API Documentation
+See Gem.Powerplant.Api.http for example API requests.
+
+License
+[Add your license information here]
+
+
