@@ -1,4 +1,3 @@
-````markdown
 # Gem Powerplant
 
 A modular C# solution for managing powerplant operations and production planning with a clean architecture approach.
@@ -28,6 +27,7 @@ This solution follows a layered architecture pattern:
    git clone <repository-url>
    cd gem-spaas-powerplant
    ```
+
 ````
 
 2. Navigate to the project root
@@ -289,3 +289,4 @@ For issues or questions, please contact the development team or open an issue in
 ```
 
 ```
+````
