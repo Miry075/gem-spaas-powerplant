@@ -2,6 +2,8 @@ using Microsoft.Extensions.Logging;
 using Gem.Powerplant.Application.Interfaces;
 using Gem.Powerplant.Domain.Enums;
 using Gem.Powerplant.Domain.Models;
+using System.Collections.Generic;
+using System;
 
 namespace Gem.Powerplant.Application.Services;
 
