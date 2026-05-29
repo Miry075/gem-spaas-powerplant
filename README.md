@@ -43,10 +43,10 @@ This solution follows a layered architecture pattern:
 Start the API:
 
 ```bash
-dotnet run --project Gem.Powerplant.Api
+ dotnet run --urls http://localhost:8888 --project Gem.Powerplant.Api
 ```
 
-The API will be available at `https://localhost:5133` (or configured port in `appsettings.json`).
+The API will be available at `https://localhost:8888` (or configured port in `appsettings.json`).
 
 #### Docker
 
