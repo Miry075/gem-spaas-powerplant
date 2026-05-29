@@ -46,7 +46,7 @@ Start the API:
  dotnet run --urls http://localhost:8888 --project Gem.Powerplant.Api
 ```
 
-The API will be available at `https://localhost:8888` ([or configured port in `appsettings.json`](http://localhost:8888/swagger/index.html)).
+The API will be available at `https://localhost:8888`.
 
 #### Docker
 
