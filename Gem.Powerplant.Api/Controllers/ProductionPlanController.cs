@@ -2,7 +2,7 @@
 using Gem.Powerplant.Application.DTOs;
 using Gem.Powerplant.Application.Interfaces;
 
-namespace Gem.Powerplant.Application.Api.Controllers;
+namespace Gem.Powerplant.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
